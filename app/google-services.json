@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "502671086463",
+    "firebase_url": "https://oclock-ea8a5.firebaseio.com",
+    "project_id": "oclock-ea8a5",
+    "storage_bucket": "oclock-ea8a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:502671086463:android:c345ec4833361d9a",
+        "android_client_info": {
+          "package_name": "com.example.leejinyeong.a6oclock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "502671086463-r9cses7dsn3qff2phsqmtu554bc5jcam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1u6wK3E_UA7wAJAZJrRI_Fm5O4MnsyTg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
