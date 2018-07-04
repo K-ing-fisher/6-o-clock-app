@@ -7,8 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.leejinyeong.a6oclock.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -18,18 +25,25 @@ public class MailWriteActivity extends AppCompatActivity {
     EditText text;
     Button button;
 
-    private Realm realm;
+    FirebaseFirestore db;
 
-    FirebaseFirestore firestore;
+    Map<String, Object> mail = new HashMap<>();
+
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mail_write);
 
-        firestore = FirebaseFirestore.getInstance();
+        db = FirebaseFirestore.getInstance();
 
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder().build();
+
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        final String time = simpleDateFormat.format(date);
 
         //초기화
         realm.deleteRealm(realmConfiguration);
@@ -48,8 +62,21 @@ public class MailWriteActivity extends AppCompatActivity {
                         MailDB mail = realm.createObject(MailDB.class);
                         mail.setText(text.getText().toString());
                         mail.setTitle("ASDF");
+                        mail.setDate(time);
                     }
                 });
+
+                mail.put("Title", "ASDF");
+                mail.put("Text", text.getText().toString());
+                mail.put("Date", time);
+
+                db.collection("mail")
+                        .add(mail)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                            }
+                        });
 
                 finish();
             }

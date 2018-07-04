@@ -12,6 +12,7 @@ import com.facebook.AccessToken;
 public class MainActivity extends AppCompatActivity {
 
     Button mailButton;
+    Button mailStorageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mailButton = findViewById(R.id.mailButton);
-
         mailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,6 +33,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        mailStorageButton = findViewById(R.id.mailStorageButton);
+        mailStorageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MailStorageActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
