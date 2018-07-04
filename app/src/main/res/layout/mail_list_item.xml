@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="10dp"
+    android:background="@drawable/primary_button">
+    <TextView
+        android:id="@+id/mail_receive_date"
+        android:layout_above="@id/mail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20180704"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/mail_title"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="편지 제목"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+    <Button
+        android:id="@+id/trash_button"
+        android:layout_toLeftOf="@id/like_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/trash_button"/>
+    <Button
+        android:id="@+id/like_button"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/like_button"/>
+</RelativeLayout>
