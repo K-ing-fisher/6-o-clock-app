@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 
 import com.example.leejinyeong.a6oclock.mail.MailWriteActivity;
 import com.facebook.AccessToken;
@@ -13,7 +12,6 @@ import com.facebook.AccessToken;
 public class MainActivity extends AppCompatActivity {
 
     Button mailButton;
-    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mailButton = findViewById(R.id.mailButton);
-        listView = findViewById(R.id.listView);
 
         mailButton.setOnClickListener(new View.OnClickListener() {
             @Override
