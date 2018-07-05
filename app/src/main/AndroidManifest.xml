@@ -10,12 +10,12 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".mail.KFApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".mail.KFApplication"
         android:theme="@style/AppTheme">
         <meta-data
             android:name="com.facebook.accountkit.ApplicationName"
@@ -52,7 +52,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-        <activity android:name=".mail.MailWriteActivity"></activity>
+        <activity android:name=".mail.MailWriteActivity" />
+        <activity android:name=".MailStorageActivity"></activity>
     </application>
 
 </manifest>
