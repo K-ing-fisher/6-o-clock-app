@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="12dp"
     android:background="#f1f1f1"
     tools:context=".mail.MailWriteActivity">
@@ -52,4 +51,4 @@
         android:id="@+id/saveButton"
         android:background="@drawable/primary_button"
         android:text="저장"/>
-<RelativeLayout/>
+</RelativeLayout>
