@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#f1f1f1"
     tools:context=".mail.MailWriteActivity">
 
-    <EditText
-        android:id="@+id/mail"
+    <RelativeLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="9"
-        android:background="@null"
-        android:gravity="top"
-        android:cursorVisible="false"/>
-
-    <Button
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/cross_button"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="편지 작성"
+            android:textSize="24sp"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/sub_header"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/saveButton"
-        android:text="저장"
-        android:layout_gravity="center"
-        android:layout_weight="1"/>
+        android:text="편지 내용"/>
 
-</LinearLayout>
+    <EditText
+        android:layout_below="@+id/sub_header"
+        android:layout_above="@+id/saveButton"
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/primary_button"
+        android:cursorVisible="false"
+        android:gravity="top" />
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/saveButton"
+        android:background="@drawable/primary_button"
+        android:text="저장"/>
+<RelativeLayout/>
