@@ -24,6 +24,7 @@ public class MailWriteActivity extends AppCompatActivity {
 
     EditText text;
     Button button;
+    Button quitButton;
 
     FirebaseFirestore db;
 
@@ -52,6 +53,7 @@ public class MailWriteActivity extends AppCompatActivity {
 
         text = findViewById(R.id.mail);
         button = findViewById(R.id.saveButton);
+        quitButton = findViewById(R.id.quit_write_button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +80,13 @@ public class MailWriteActivity extends AppCompatActivity {
                             }
                         });
 
+                finish();
+            }
+        });
+
+        quitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 finish();
             }
         });
